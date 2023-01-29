@@ -1,0 +1,276 @@
+<!doctype html>
+<html lang="es" style="height: 100%;">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bootstrap demo</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/styleCuentas.css">
+
+
+</head>
+
+<body id="app">
+  <!-- Image and text -->
+  <link rel="icon" type="image/x-icon" href="./css/imagenes/Fox_Banco.png">
+
+  <nav class="navbar  navbar-expand-lg justify-content-around bg-green ">
+
+    <div class=" d-flex justify-content-around ">
+      <ul class="navbar-nav">
+        <li class="nav-item  m-2">
+          <a class="nav-link" href="./prestamos.html">Prestamos</a>
+        </li>
+        <li class="nav-item ">
+          <a class="nav-link m-2 active" href="#">Cuentas</a>
+        </li>
+      </ul>
+    </div>
+    <div class="d-flex justify-content-aroun ">
+      <img src="./css/imagenes/Fox_BancoRecortado2.png" width="70" height="70" class="d-inline-block align-top" alt="">
+
+      <a class="navbar-brand fox tracking-in-expand-fwd-top" href="#">Banco Fox</a>
+
+    </div>
+
+
+    <ul class="navbar-nav  d-flex justify-content-around p-1">
+      <li class="nav-item ">
+        <a class="nav-link m-2" href="./tarjetas.html">Tarjetas</a>
+      </li>
+
+
+      <li>
+        <div class="d-flex justify-content-center m-2" v-on:click="mostar = !mostar">
+          <i class="bi bi-person-circle" type="button" style="font-size: 2rem;"></i>
+        </div>
+        <div class="linkBajo bg-green scale-up-ver-top   " v-if="!mostar">
+          <a v-on:click="salir" class="nav-link d-flex justify-content-center">Salir</a>
+        </div>
+      </li>
+    </ul>
+
+  </nav>
+  <div class="d-flex justify-content-center">
+    <h1 class="">Bienvenido <span class="tracking-in-expand-fwd-top" style="color:#FA7070;">{{nombre}}</span></h1>
+  </div>
+  <section class="d-flex justify-content-center  slideInLeft" style="min-height:60vh ;margin:2rem;">
+
+
+    <div class="div-cuentas d-flex justify-content-center ">
+      <div class="container-cuentas">
+        <div v-for="cuenta in cuentas">
+          <div class="m-3 cuenta text-dark ">
+            <h5 class="text-dark">Numero de cuenta:</h5>
+            <p>{{cuenta.numero}}</p>
+            <div class="d-flex">
+
+              <h5>Saldo: </h5>
+              <p> {{cuenta.balance}}</p>
+            </div>
+            <div class="row botones text-center">
+              <div>
+                <a class="card-box-footer button-84 text-decoration-none"  :href="'./transacion.html?id='+cuenta.id">Historial</a>
+              </div>
+              <div>
+                <input type="radio" class="d-none " :id=cuenta.numero :value=cuenta.numero v-model="cuentaOrigen" />
+                <label :for=cuenta.numero class="card-box-footer button-84" type="button"
+                  v-on:click="transaccion = !transaccion">Transacion</label>
+              </div>
+            </div>
+            <i class="bi bi-coin i"></i>
+          </div>
+        </div>
+
+
+        <div class="d-flex justify-content-center ">
+          <div>
+            <div class="m-3 cuenta text-dark" v-show="cuentas.length < 3">
+              <h5 class="text-dark">Agregar cuenta</h5>
+              <p>vin: ???</p>
+              <div class="d-flex">
+
+                <h5>Saldo: </h5>
+                <p> 000</p>
+              </div>
+              <div class="row botones text-center">
+
+              </div>
+              <i class="bi bi-plus-circle-fill" v-on:click="Crear_Cuenta" type="button"></i>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+
+
+
+
+
+
+    <div class="transaccion form" v-if="!transaccion">
+
+      <i class="bi bi-x-circle-fill" v-on:click="transaccion = !transaccion" type="button" style="font-size: 20px;"></i>
+      <div class="formulario2">
+
+        <h2 class="text-dark">Transacción</h2>
+        <form class="login-form">
+          <h6 class="d-flex justify-content-center text-dark">Origen</h6>
+          <h6 class="d-flex justify-content-center text-dark cuentaNumero">{{cuentaOrigen}}</h6>
+
+          <p class="text-dark">Destino</p>
+          <input v-model="cuentaDeDestino" type="text" placeholder="vin:001" />
+          <p class="text-dark">Monto</p><input v-model="monto" type="text" placeholder="100" />
+          <p class="text-dark">Comentario</p>
+          <input v-model="descripción" type="text" placeholder="Comenta algo" />
+          <button v-on:click="transferir" type="button">Transferir</button>
+      </div>
+    </div>
+
+
+    <!--<div class="col-lg-3 col-sm-6" v-on:click="Crear_Cuenta" v-show="cuentas.length < 3"  type="button" >-->
+    <!--<div class="card-box bg-red">-->
+    <!--<div class="inner">-->
+    <!--<p>Cuenta  </p>-->
+    <!--<h3>Crear cuenta</h3>-->
+    <!--</div>-->
+    <!--<div class="icon">-->
+    <!--<i  class="bi bi-plus-lg"></i>                         -->
+    <!--</div>-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--</div>-->
+
+  </section>
+
+
+
+  <footer class="text-dark text-center text-lg-start bg-green ">
+    <!-- Grid container -->
+    <div class="container p-4">
+      <!--Grid row-->
+      <div class="row mt-4">
+        <!--Grid column-->
+        <div class="col-lg-4 col-md-12 mb-4 mb-md-0">
+          <h4 class="text-uppercase mb-4 remarco d-flex justify-content-center">Banco Fox <img
+              src="./css/imagenes/Fox_BancoRecortado2.png" alt="Imagen del bacno " width="50" height="50"></h4>
+
+          <p>
+            El banco Preferidos de nuestos clientes contamos con 50 años de exelente historia Siempre demostrando la
+            exelencia
+          </p>
+
+          <p>
+            ahora mas actualisados que nunca, contando con redes sociales y una version Digital
+          </p>
+
+          <div class="mt-4 ">
+            <!-- Facebook -->
+            <a type="button " class="btn btn-floating btn-light btn-lg m-1 redes"><i class="bi bi-facebook"></i></i></a>
+            <!-- Dribbble -->
+            <!-- Twitter -->
+            <a type="button " class="btn btn-floating btn-light btn-lg m-1 redes"><i class="bi bi-twitter"></i></a>
+            <!--  + -->
+            <a type="button " class="btn btn-floating btn-light btn-lg m-1 redes"><i class="bi bi-instagram"></i></a>
+            <!-- Linkedin -->
+          </div>
+        </div>
+        <!--Grid column-->
+
+        <!--Grid column-->
+        <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
+          <h4 class="text-uppercase mb-4 pb-1 remarco">Envianos un Mensaje</h4>
+
+          <div class="form-outline form-white mb-4 m-1">
+            <input type="text" id="formControlLg" class="form-control form-control-lg" />
+            <label class="form-label  btn m-2 boton" for="formControlLg">Enivar</label>
+          </div>
+
+          <ul class="fa-ul" style="margin-left: 1.65em;">
+            <li class="mb-3">
+              <a class="btn" href="https://goo.gl/maps/RwNYdWKb249SdTu17"><span class="fa-li"><i
+                    class="bi bi-geo-alt"></i> </span><span class="ms-2">Traingulo de las vermudas</span></a>
+            </li>
+            <li class="mb-3">
+              <span class="fa-li"><i class="bi bi-person-lines-fill"></i></span><span
+                class="ms-2">Contato@Yahoo.com.ar</span>
+            </li>
+            <li class="mb-3">
+              <span class="fa-li"><i class="bi bi-telephone-fill"></i></span><span class="ms-2">+ 48 234 567 88</span>
+            </li>
+          </ul>
+        </div>
+        <!--Grid column-->
+
+        <!--Grid column-->
+        <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
+          <h5 class="text-uppercase mb-4 remarco d-flex justify-content-center">Horario De Apertura</h5>
+
+          <table class="table text-center text-black">
+            <tbody class="fw-normal">
+              <tr>
+                <td>Lunes - Martes:</td>
+                <td>8am - 9pm</td>
+              </tr>
+              <tr>
+                <td>Miercoles - Jueves:</td>
+                <td>8am - 1am</td>
+              </tr>
+              <tr>
+                <td>Viernes:</td>
+                <td>9am - 10pm</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <!--Grid column-->
+      </div>
+      <!--Grid row-->
+    </div>
+    <!-- Grid container -->
+
+    <!-- Copyright -->
+    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+      © 2020 Copyright:
+      <a class="text-dark" href="hñ">MindHub.com</a>
+    </div>
+    <!-- Copyright -->
+  </footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  <script src="./javascripts/main.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>

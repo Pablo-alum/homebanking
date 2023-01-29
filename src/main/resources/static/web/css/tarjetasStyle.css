@@ -1,0 +1,117 @@
+bi-credit-card{
+font-size: 5rem!important
+}
+.card-div{
+border-radius: 30px!important;
+font-size: 1rem;
+}
+.logo{
+display: flex;
+align-items: center;
+padding:1rem;
+}
+.logo img{
+width: 40px;;
+}
+.logo h5{ 
+font-size: 16px;
+color: white;
+}
+
+.card-tarjeta .chip{ 
+width: 3rem;
+height: 2rem;
+}
+
+.tarjeta-Detalles{
+background-color: red;
+align-items: flex-end; 
+margin-top: 40px;
+align-items: flex-end;
+justify-content: space-between;
+}
+
+.card-tarjeta .back-face{
+background-color: red;
+}
+.back-face .barra-magnetica{
+
+position: absolute;
+top:40px;
+height: 45px;
+width: 90%;
+background-color: #000;
+}
+.GOLD{
+height:  12rem;
+width:19rem;
+background: #ffb347; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #ffb347, #ffcc33); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #ffb347, #ffcc33); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+
+border-radius: 20px;
+box-shadow: 0  25px 45px rgb(255, 255, 255, 0,1);
+background-color: gold!Important;
+}
+.SILVER{
+background: #304352;
+  background: -webkit-linear-gradient(to right, #304352, #d7d2cc); 
+  background: linear-gradient(to right, #304352, #d7d2cc); 
+
+
+height:  12rem;
+width:19rem;
+backdrop-filter: blur(25px);
+border-radius: 20px;
+box-shadow: 0  25px 45px rgb(255, 255, 255, 0,1);
+
+}
+.TITANIUM{
+height:  12rem;
+width:19rem;
+backdrop-filter: blur(25px);
+border-radius: 20px;
+box-shadow: 0  25px 45px rgb(255, 255, 255, 0,1);
+
+background: #abbaab; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #abbaab, #ffffff); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #abbaab, #ffffff); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+
+}
+.bottonTarjeta{
+border-radius: 10px;
+}
+
+.colorTitanium{
+backdrop-filter: blur(25px);
+border-radius: 5px;
+box-shadow: 0  25px 45px rgb(255, 255, 255, 0,1);
+
+background: #abbaab; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #abbaab, #ffffff); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #abbaab, #ffffff); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+
+}
+.colorsilver{
+background: #304352;
+  background: -webkit-linear-gradient(to right, #304352, #d7d2cc); 
+  background: linear-gradient(to right, #304352, #d7d2cc); 
+backdrop-filter: blur(25px);
+border-radius: 5px;
+box-shadow: 0  25px 45px rgb(255, 255, 255, 0,1);
+
+
+}
+.colorGold{
+background: #ffb347; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #ffb347, #ffcc33); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #ffb347, #ffcc33); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+border-radius: 5px;
+box-shadow: 0  25px 45px rgb(255, 255, 255, 0,1);
+background-color: gold!Important;
+
+}

@@ -1,0 +1,134 @@
+body{
+  @import url('https://fonts.googleapis.com/css2?family=Mulish&display=swap');
+    font-family: 'Mulish', sans-serif!important;
+    height: 100%;
+ background: #EEF5DB !important; /* fallback for old browsers */
+
+}
+
+
+
+.nav-link{
+font-size: 1.3rem;
+}
+.fox{
+    font-size: 2.3rem!important;
+
+}
+
+.nav-link:hover{
+border-bottom: 2px black solid;
+}
+.active{
+    border-bottom: 3px #FA7070    solid;
+
+};
+
+
+.bg-red{
+  background-color: #FA7070;
+}
+.text-red{
+  color: #FA7070;
+}
+.boton{
+background-color: #FA7070!important;
+
+}
+
+
+
+
+
+
+.bg-green{
+   background-color:#72A276;
+}
+
+
+
+.redes:hover{
+
+    color:#3D8361;
+
+}
+
+
+
+
+.mas{
+border-bottom:gray 5px solid ;
+margin:2rem;
+}
+
+.bi-arrow-down-circle-fill{
+font-size: 2rem;
+}
+
+.remarco:hover{
+border-bottom: 2px black solid;
+color: #FA7070;
+}
+
+.tracking-in-expand-fwd-top {
+    -webkit-animation: tracking-in-expand-fwd-top 0.8s ;
+            animation: tracking-in-expand-fwd-top 0.8s ;
+    }
+
+
+
+
+
+@-webkit-keyframes tracking-in-expand-fwd-top {
+  0% {
+    letter-spacing: -0.5em;
+    -webkit-transform: translateZ(-700px) translateY(-500px);
+            transform: translateZ(-700px) translateY(-500px);
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  100% {
+    -webkit-transform: translateZ(0) translateY(0);
+            transform: translateZ(0) translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes tracking-in-expand-fwd-top {
+  0% {
+    letter-spacing: -0.5em;
+    -webkit-transform: translateZ(-700px) translateY(-500px);
+            transform: translateZ(-700px) translateY(-500px);
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  100% {
+    -webkit-transform: translateZ(0) translateY(0);
+            transform: translateZ(0) translateY(0);
+    opacity: 1;
+  }
+}
+
+
+.nav-bajo{
+width: 5rem;
+}
+
+
+
+.linkBajo{
+position: absolute;
+width: 5rem;
+
+}
+
+
+@media all and (max-width: 522px){
+  .navbar{flex-direction: column!important;}
+.linkBajo{
+position: relative;}
+}
+section{background-color: red;}

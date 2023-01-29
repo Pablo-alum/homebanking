@@ -1,0 +1,19 @@
+LA AutenticacionWeb 
+
+Sirve para asignar roles a un cliente o usuario si dicho cliente existe o Usario  existe(obiamtne neceito saver cual es el cliente al que le voy a dar los roles)
+lo hace accediendo mediante un enpoints para poder acceder a distintos endpoints
+
+La autenticacion 
+es quien es el usuario
+Autricacion sirver 
+para asignarle un rol al usuario 
+
+
+Para Desarrollar una aplicación Se necesita  programarla(Es una serie de Procemientos para hacer algo)
+
+La api no hace nada solo es una Interfaz (EL concepto se llama inversion de Control)
+
+@Configuration
+Es para Decirle que vamos a Trabajar con nuestras propias Configuraciones
+
+CUnado genro el New user genro el autication

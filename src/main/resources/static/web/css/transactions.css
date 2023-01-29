@@ -1,0 +1,12 @@
+.DEBITO{
+background-color: #FA7070!important ;
+}
+.CREDITO{
+background-color:#3D8361!important;
+}
+.CREDITOtboody:hover{
+background-color: #366d52;
+}
+.DEBITOtboody:hover{
+background-color: #e25858;
+}
