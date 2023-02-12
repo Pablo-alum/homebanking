@@ -4,7 +4,6 @@ const { createApp } = Vue
   createApp({
     data() {
       return {
-				hola:"hola",
         urlApi:"http://localhost:8080/api/clientes/current",
         cliente:[],
         nombre:"",
@@ -18,7 +17,8 @@ const { createApp } = Vue
 				cuentaDeDestino:"",
 				abrirAlerta:false,
 				cuotaPorcentaje:null,
-				PorcentajeMasMonto:null
+				PorcentajeMasMonto:null,
+				MasPrestamos:true,
 			}
 
     },

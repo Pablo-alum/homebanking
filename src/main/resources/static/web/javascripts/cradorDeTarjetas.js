@@ -21,7 +21,7 @@ const { createApp } = Vue
 			let month = new Date().getMonth()+1
 				let day = new Date().getDay()+30
 				this.fechaDeVencimiento = `${year}/${month}/${day}`
-	
+      	
     },
 
     mounted(){
@@ -36,8 +36,8 @@ const { createApp } = Vue
                 this.nombre = response.data.nombre
                 this.cuentas = response.data.cuenta
 								this.tarjetas = response.data.tarjeta
-							this.tarjetas_debito = this.tarjetas.filter(tarjeta=> tarjeta.type.includes("DEVITO"))
-							this.tarjetas_credito = this.tarjetas.filter(tarjeta=> tarjeta.type.includes("CREDITO"))
+							//this.tarjetas_debito = this.tarjetas.filter(tarjeta=> tarjeta.type.includes("DEVITO"))
+							//this.tarjetas_credito = this.tarjetas.filter(tarjeta=> tarjeta.type.includes("CREDITO"))
             })},
 
 			salir:function() {
@@ -45,11 +45,12 @@ const { createApp } = Vue
 							
 			},
 			CrearTarjetas:function(){
-				 axios.post('/api/clientes/current/tarjeta',"tipoDeTransacciónTarjetas="+this.tipoDeTarjeta+"&tipoDeColor="+this.ColorTarjeta).then(()=>window.location.href="./tarjetas.html")
-
+        console.log(this.tipoDeTarjeta)
+        console.log(this.ColorTarjeta)
+        axios.post('/api/cliente/current/tarjeta',"tipoDeTransacciónTarjetas=CREDITO"+"&tipoDeColor=GOLD").then(()=>window.location.href="./tarjetas.html")
 
 			},
-    }
+    },
 
 
 

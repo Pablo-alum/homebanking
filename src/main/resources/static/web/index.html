@@ -1,91 +1,202 @@
 <!DOCTYPE html>
-<html lang="es" style="height: 100%">
+<html lang="es">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Bootstrap demo</title>
+    <title>Banco fox</title>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="./css/style.css">
-    <!--<link rel="stylesheet" href="./css/tarjetasStyle.css">-->
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/tarjetasStyle.css" />
+    <link rel="stylesheet" href="./css/styleLogin.css" />
   </head>
 
-  <body id="app">
+  <body id="app" style="min-width: 100%">
     <!-- imagen  y texto-->
     <link rel="icon" type="image/x-icon" href="./css/imagenes/Fox_Banco.png" />
 
-
-
-
-
-
-
-
-
-
-
-
-
-    <nav class="bg-green d-flex   align-items-center   justify-content-between">
+    <nav class="bg-green d-flex align-items-center justify-content-between">
       <div class="">
         <img
           src="./css/imagenes/Fox_BancoRecortado2.png"
           width="70"
           height="70"
-          style="margin-left:5px"
+          style="margin-left: 5px"
           alt=""
         />
-        <a class="navbar-brand fox tracking-in-expand-fwd-top m-1" href="#"
+        <a class="navbar-brand fox m-1" href="#"
           >Banco <span class="text-red">Fox</span>
         </a>
       </div>
-      <ul class=" d-flex p-1">
-                <li class="nav-item">
-                  <a class="nav-link m-2" href="./ingreso.html">Ingreso</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link m-2" href="./registro.html">Registro</a>
-                </li>
+      <ul class="d-flex justify-content-center m-2">
+        <li class="list-group-item">
+          <a
+            class="nav-link m-2 text-decoration-none mx-4"
+            href="./ingreso.html"
+            >Ingresa</a
+          >
+        </li>
       </ul>
     </nav>
 
+    <section class="container justify-content-between" style="min-height: 80%">
+      <div class="row">
+        <h2 class="display-5 col slide-in-left">
+          <span class="display-4 text-red">Tradición </span>y
+          <span class="display-4 text-red">innovación </span> con Banco
+          <span class="display-4 text-red">fox.</span>
+        </h2>
 
-    <section class="d-flex flex-column secion" style="min-height: 80%">
-      <div class="">
-          <h2 class="">
+        <div class="col slide-in-right">
+          <div class="d-flex justify-content-center">
+            <div class="login-page">
+              <h2>
+                <span class="display-4 text-red d-flex justify-content-center"
+                  >Registrate</span
+                >
+              </h2>
 
-            Bienvenido al Banco Fox, donde estamos comprometidos en brindarle una experiencia bancaria excepcional. Con bajas tasas de interés, tarjetas personalizables y un servicio al cliente de primer nivel, estamos seguros de que encontrará todo lo que necesita para manejar sus finanzas de manera efectiva. ¡Conoce la diferencia de Fox Banco hoy mismo!
-          </h2>
-          <h2 class="d-flex justify-content-center ">banco fox 1</h2>
+              <div class="form">
+                <form class="register-form">
+                  <input v-model="nombre" type="text" placeholder="Nombre" />
+                  <input
+                    v-model="apellido"
+                    type="text"
+                    placeholder="apellido"
+                  />
+                  <input
+                    v-model="contraseña"
+                    type="password"
+                    placeholder="Contraseña"
+                  />
+                  <input v-model="emial" type="text" placeholder="emial" />
+                  <button v-on:click="crear" type="button">Registrate</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-
-      <div class="">
-          <h2 class="h2 d-flex justify-content-center">
-                      Bajas  tasas de interés en 
-          </h2>
-          <h2 class="d-flex justify-content-center ">banco fox</h2>
-      </div>
-
-      <div class="">
-          <h2 class="h2 d-flex justify-content-center">
-                      Tarjeta personalizables en 
-          </h2>
-          <h2 class="d-flex justify-content-center ">banco fox</h2>
-      </div>
-
-      <div class="">
-          <h2 class="h2 d-flex justify-content-center">
-                      Haz más con tu dinero: Bienvenido a 
-          </h2>
-          <h2 class="d-flex justify-content-center ">banco fox</h2>
-      </div>
-
     </section>
+    <section class="container justify-content-between" style="min-height: 80%">
+      <div class="row m-2">
+        <h2 class="display-5 col slide-in-left">
+          <span class="display-4 text-red">Tarjetas </span>
+          <span class="display-4 text-red">Personlisadas </span> con Banco
+          <span class="display-4 text-red">fox.</span>
+        </h2>
 
+        <div class="col slide-in-right marginCartas">
+          <div class="d-flex justify-content-center">
+            <div class="card-tarjeta TITANIUM" style="z-index: 4">
+              <div class="d-flex justify-content-between container">
+                <span class="logo d-flex justify-content-center">
+                  <img src="./css/imagenes/logo.png" alt="" />
+                  <h5>Master Card</h5>
+                </span>
+                <img class="chip m-3" src="./css/imagenes/chip.png" alt="" />
+              </div>
+              <div
+                class="d-flex justify-content-between align-items-end position-absolute"
+              >
+                <div class="numero-Tarjetas m-2">
+                  <h5>Número</h5>
+                  <h6 class="numero">250 323 312</h6>
+                  <h6 class="nombre m-1">
+                    <span class="h5">Titular:</span>Sancho pansa
+                  </h6>
+                </div>
+                <div class="fecha-vencimiento m-3">
+                  <h6 class="">1/20/2029</h6>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="card-tarjeta SILVER position-absolute"
+              style="transform: rotate(-30deg); z-index: 2; top: -2rem"
+            >
+              <div class="d-flex justify-content-between container">
+                <span class="logo d-flex justify-content-center">
+                  <img src="./css/imagenes/logo.png" alt="" />
+                  <h5>Master Card</h5>
+                </span>
+                <img class="chip m-3" src="./css/imagenes/chip.png" alt="" />
+              </div>
+              <div
+                class="d-flex justify-content-between align-items-end position-absolute"
+              >
+                <div class="numero-Tarjetas m-2">
+                  <h5>Número</h5>
+                  <h6 class="numero">250 323 312</h6>
+                  <h6 class="nombre m-1">
+                    <span class="h5">Titular:</span>Sancho pansa
+                  </h6>
+                </div>
+                <div class="fecha-vencimiento m-3">
+                  <h6 class="">1/20/2029</h6>
+                </div>
+              </div>
+            </div>
+            <div
+              class="card-tarjeta GOLD position-absolute"
+              style="transform: rotate(-20deg); z-index: 3; top: -1rem"
+            >
+              <div class="d-flex justify-content-between container">
+                <span class="logo d-flex justify-content-center">
+                  <img src="./css/imagenes/logo.png" alt="" />
+                  <h5>Master Card</h5>
+                </span>
+                <img class="chip m-3" src="./css/imagenes/chip.png" alt="" />
+              </div>
+              <div
+                class="d-flex justify-content-between align-items-end position-absolute"
+              >
+                <div class="numero-Tarjetas m-2">
+                  <h5>Número</h5>
+                  <h6 class="numero">250 323 312</h6>
+                  <h6 class="nombre m-1">
+                    <span class="h5">Titular:</span>Sancho pansa
+                  </h6>
+                </div>
+                <div class="fecha-vencimiento m-3">
+                  <h6 class="">1/20/2029</h6>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="container justify-content-between" style="min-height: 80%">
+      <div class="row m-2">
+        <h2 class="display-5 col-md slide-in-left">
+          <span class="display-4 text-red">Tradición </span>y
+          <span class="display-4 text-red">innovación </span> con Banco
+          <span class="display-4 text-red">fox.</span>
+        </h2>
+        <div class="col-md d-flex justify-content-center">
+          <p class="h5 bg-green rounded p-2 slide-in-right">
+            Banco Fox es una institución financiera que ha estado en el mercado
+            por más de 50 años. Durante este tiempo, ha adquirido una gran
+            experiencia en el sector bancario y ha logrado desarrollar una
+            solida reputación por su seguridad y fiabilidad en la gestión de sus
+            clientes y sus activos. El banco ha sido un pionero en la adopción
+            de tecnologías innovadoras y cuenta con una página web intuitiva y
+            fácil de usar que permite a sus clientes realizar operaciones
+            bancarias en línea de manera segura y eficiente. Además, Banco Fox
+            ofrece una amplia gama de productos y servicios financieros para
+            satisfacer las necesidades de sus clientes, incluyendo cuentas de
+            cheques y ahorro, tarjetas de crédito, préstamos, inversiones y
+            seguros.
+          </p>
+        </div>
+      </div>
+    </section>
     <footer class="text-dark text-center text-lg-start bg-green">
       <!-- Grid container -->
       <div class="container p-4">
@@ -219,11 +330,8 @@
     />
 
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-    <script src="./javascripts/card.js"></script>
-
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
-
-    <!--<script src="./javascrjkkipts/card.js"></script>-->
+    <!--<script src="./javascripts/ingreso.js"></script>-->
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"

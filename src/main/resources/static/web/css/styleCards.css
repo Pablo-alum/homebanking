@@ -23,7 +23,7 @@ height: 17rem;
 .card-div .lines{
  position: absolute;
  inset: 0;
- background-color: green;;
+ background-color: green;
 }
 .content{
 border-radius: 20px;
@@ -71,7 +71,7 @@ margin-left: 4rem;
 
 
 
-/*Parte del Pretamos*/
+/*Check box de los prestamos */
 .select {
   display:flex;
   flex-direction: column;
@@ -101,7 +101,7 @@ margin-left: 4rem;
 }
 
 .option:hover {
-  background:#666;
+  background:#f9fadc;
 }
 
 .select:focus .option {

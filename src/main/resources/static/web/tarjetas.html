@@ -44,11 +44,8 @@
                 <li class="nav-item">
                     <a class="nav-link m-2" href="./transactions.html">historial</a>
                 </li>
-                <li>
-                    <div class="d-flex justify-content-center m-2">
-                        <i class="bi bi-person-circle" style="font-size: 2rem;"></i>
-												<a v-on:click="salir" class="nav-link" >Salir</a>	
-                    </div>
+                <li class="nav-item">
+												<a v-on:click="salir" class="nav-link m-2" >Salir</a>	
                 </li>
             </ul>
 
@@ -64,7 +61,7 @@
 					<h4  v-show="tarjetas_debito.length > 0" >Tarjetas Débito</h4>
 				</div>
 						<div class="container d-flex justify-content-center   m-3"  >
-							<div class="row">
+							<div class="row d-flex justify-content-center">
 								<div    :class="tarjeta.colorType" class="card-tarjeta  m-3  "  v-for="tarjeta   in tarjetas_debito" >
 
 											<div class="d-flex justify-content-between container">
@@ -155,7 +152,7 @@
 			<!--Your content here-->
 		<!--</div>-->
 		<!--</Tilt>-->
-			<div class="d-lg-flex justify-content-center nav-item">
+			<div class=" d-flex justify-content-center nav-item">
 						<i class="bi bi-arrow-right-circle-fill h3" ></i>
 							<a href="./creadorDeTarjetas.html" class="nav-link m-2 ">Crea Tu Tarjeta</a>
 						<i class="bi bi-arrow-left-circle-fill h3"></i>

@@ -41,14 +41,9 @@
       <li class="nav-item ">
         <a class="nav-link m-2" href="./tarjetas.html">Tarjetas</a>
       </li>
-
-
       <li>
         <div class="d-flex justify-content-center m-2" v-on:click="mostar = !mostar">
           <i class="bi bi-person-circle" type="button" style="font-size: 2rem;"></i>
-        </div>
-        <div class="linkBajo bg-green scale-up-ver-top   " v-if="!mostar">
-          <a v-on:click="salir" class="nav-link d-flex justify-content-center">Salir</a>
         </div>
       </li>
     </ul>
@@ -73,7 +68,7 @@
             </div>
             <div class="row botones text-center">
               <div>
-                <a class="card-box-footer button-84 text-decoration-none"  :href="'./transacion.html?id='+cuenta.id">Historial</a>
+                <a class="card-box-footer button-84 text-decoration-none m-1 btn"  :href="'./transacion.html?id='+cuenta.id">Historial</a>
               </div>
               <div>
                 <input type="radio" class="d-none " :id=cuenta.numero :value=cuenta.numero v-model="cuentaOrigen" />
@@ -86,11 +81,11 @@
         </div>
 
 
-        <div class="d-flex justify-content-center ">
+        <div class="d-flex justify-content-center" v-on:click="Crear_Cuenta" type="button">
           <div>
             <div class="m-3 cuenta text-dark" v-show="cuentas.length < 3">
               <h5 class="text-dark">Agregar cuenta</h5>
-              <p>vin: ???</p>
+              <p>vin: ?????</p>
               <div class="d-flex">
 
                 <h5>Saldo: </h5>
@@ -99,7 +94,7 @@
               <div class="row botones text-center">
 
               </div>
-              <i class="bi bi-plus-circle-fill" v-on:click="Crear_Cuenta" type="button"></i>
+              <i class="bi bi-plus-circle-fill" ></i>
             </div>
           </div>
         </div>
@@ -110,13 +105,13 @@
 
 
 
+<!--Pedaso retutilisables-->
 
 
 
+    <div class="transaccion form" v-show="!transaccion">
 
-    <div class="transaccion form" v-if="!transaccion">
-
-      <i class="bi bi-x-circle-fill" v-on:click="transaccion = !transaccion" type="button" style="font-size: 20px;"></i>
+      <i class="bi bi-x-circle-fill m-2" v-on:click="transaccion = !transaccion" type="button" style="font-size: 20px;"></i>
       <div class="formulario2">
 
         <h2 class="text-dark">Transacción</h2>
@@ -134,20 +129,15 @@
     </div>
 
 
-    <!--<div class="col-lg-3 col-sm-6" v-on:click="Crear_Cuenta" v-show="cuentas.length < 3"  type="button" >-->
-    <!--<div class="card-box bg-red">-->
-    <!--<div class="inner">-->
-    <!--<p>Cuenta  </p>-->
-    <!--<h3>Crear cuenta</h3>-->
-    <!--</div>-->
-    <!--<div class="icon">-->
-    <!--<i  class="bi bi-plus-lg"></i>                         -->
-    <!--</div>-->
-    <!--</div>-->
-    <!--</div>-->
-    <!--</div>-->
+    <div class="position-absolute bg-green rounded d-flex justify-content-center row " style="height: 10rem; width:21rem;" v-if="!exito">
+      <p class="h3">Cuenta creada con exito</p>
+      <div class="d-flex justify-content-center">
+      <i class="bi bi-check-circle display-3"></i>
+      </div>
+    </div>
 
   </section>
+
 
 
 
