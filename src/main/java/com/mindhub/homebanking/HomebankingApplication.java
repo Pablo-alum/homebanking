@@ -29,7 +29,7 @@ public class HomebankingApplication {
 	public CommandLineRunner initData(ClienteRepositorio clienteRepositorio, CuentaRepositorio cuentaRepositorio, TransacionRepositorio transacionRepositorio, PrestamoRepositorio prestamoRepositorio, ClientePrestamoRepositorio clientePrestamoRepositorio,TarjetaRepositorio tarjetaRepositorio){
 		return args -> {
 
-			Cliente cliente1 = new Cliente("Melba" ,"Morel","melba@mindhub.com",passwordEncoder.encode("melba"));
+			Cliente cliente1 = new Cliente("Melba" ,"Morel","prueba.com",passwordEncoder.encode("prueba"));
 			Cliente cliente2 = new Cliente("Rodrigo" ,"Seul","melbaADMIN@mindhub1.com",passwordEncoder.encode("perro"));
 			Cliente cliente3 = new Cliente("Pablo" ,"Germand","melba@mindhub2.com", passwordEncoder.encode("gato"));
 

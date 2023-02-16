@@ -42,7 +42,7 @@ public class ControladorTarjetas {
     }
 
 
-    @PostMapping(path = "/api/cliente/current/tarjeta")
+    @RequestMapping(path = "/api/cliente/current/tarjeta")
     public ResponseEntity<Object> CrearTarjeta(Authentication authentication, @RequestParam TipoDeTransacciónTarjetas tipoDeTransacciónTarjetas,@RequestParam TipoDeColor tipoDeColor) {
         Cliente cliente = servicoCliente.findByEmail(authentication.getName());
 
