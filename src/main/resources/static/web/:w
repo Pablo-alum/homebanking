@@ -50,7 +50,7 @@
             <div class="login-page">
               <h2>
                 <span class="display-4 text-red d-flex justify-content-center"
-                  >Registrate</span
+                  >Registrarte</span
                 >
               </h2>
 
@@ -67,7 +67,7 @@
                     type="password"
                     placeholder="Contraseña"
                   />
-                  <input v-model="emial" type="text" placeholder="Email" />
+                  <input v-model="emial" type="text" placeholder="emial" />
                   <button v-on:click="crear" type="button">Registrarte</button>
                 </form>
               </div>
@@ -211,13 +211,13 @@
             </h4>
 
             <p>
-              El banco preferido de nuestros clientes. Contamos con mas de 50
-              años de experiencia e historia, siempre demostrando excelencia.
+              El banco Preferidos de nuestros clientes contamos con 50 años de
+              excelente historia Siempre demostrando excelencia
             </p>
 
             <p>
-              ahora mas actualizados que nunca, contamos con redes sociales y
-              una versión digital.
+              ahora mas actualizados que nunca, contando con redes sociales y
+              una versión Digital
             </p>
 
             <div class="mt-4">

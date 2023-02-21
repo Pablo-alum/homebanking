@@ -14,7 +14,7 @@
 </head>
 
 <body id="app">
-  <!-- Image and text -->
+  <!-- Imagen y  texto -->
   <link rel="icon" type="image/x-icon" href="./css/imagenes/Fox_Banco.png">
 
   <nav class="navbar  navbar-expand-lg justify-content-around bg-green ">
@@ -41,10 +41,8 @@
       <li class="nav-item ">
         <a class="nav-link m-2" href="./tarjetas.html">Tarjetas</a>
       </li>
-      <li>
-        <div class="d-flex justify-content-center m-2" v-on:click="mostar = !mostar">
-          <i class="bi bi-person-circle" type="button" style="font-size: 2rem;"></i>
-        </div>
+      <li clas="nav-item">
+          <a v-on:click="salir" class="nav-link m-2">Salir</a>
       </li>
     </ul>
 
@@ -73,7 +71,7 @@
               <div>
                 <input type="radio" class="d-none " :id=cuenta.numero :value=cuenta.numero v-model="cuentaOrigen" />
                 <label :for=cuenta.numero class="card-box-footer button-84" type="button"
-                  v-on:click="transaccion = !transaccion">Transacion</label>
+                  v-on:click="transaccion = !transaccion">Transacción</label>
               </div>
             </div>
             <i class="bi bi-coin i"></i>
@@ -152,12 +150,13 @@
               src="./css/imagenes/Fox_BancoRecortado2.png" alt="Imagen del bacno " width="50" height="50"></h4>
 
           <p>
-            El banco Preferidos de nuestos clientes contamos con 50 años de exelente historia Siempre demostrando la
-            exelencia
+              El banco preferido de nuestros clientes. Contamos con mas de 50
+              años de experiencia e historia, siempre demostrando excelencia.
           </p>
 
           <p>
-            ahora mas actualisados que nunca, contando con redes sociales y una version Digital
+       				ahora mas actualizados que nunca, contamos con redes sociales y
+              una versión digital.
           </p>
 
           <div class="mt-4 ">
