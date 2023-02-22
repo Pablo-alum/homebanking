@@ -4,7 +4,6 @@ import com.mindhub.homebanking.Modelo.*;
 import com.mindhub.homebanking.Servicios.*;
 import com.mindhub.homebanking.dtos.PrestamoDTO;
 import com.mindhub.homebanking.dtos.SolcitudPretamoDTO;
-import com.mindhub.homebanking.repositorios.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -105,7 +104,7 @@ public class ControladorPrestamos {
 
 
         double monto = solcitudPretamoDTO.getMonto();
-        Transacción TransaccionCredito = new Transacción(TipoDeTransaccion.CREDITO,monto, "préstamo aprobado", LocalDateTime.now());
+        Transaccion TransaccionCredito = new Transaccion(TipoDeTransaccion.CREDITO,monto, "préstamo aprobado", LocalDateTime.now());
             objetoCuenta.agrergarTransacion(TransaccionCredito);
         servicioTransacciones.saveTransacciones(TransaccionCredito);
 

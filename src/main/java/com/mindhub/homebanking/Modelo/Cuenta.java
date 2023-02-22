@@ -29,7 +29,7 @@ public class Cuenta {
     private Cliente cliente;
 
     @OneToMany(mappedBy = "cuenta",fetch = FetchType.EAGER)
-    private Set <Transacción>  transaciones = new HashSet<>();
+    private Set <Transaccion>  transaciones = new HashSet<>();
 
 
     public Cuenta(){}
@@ -83,10 +83,10 @@ public class Cuenta {
     }
 
 
-    public Set<Transacción> getTransaciones() {
+    public Set<Transaccion> getTransaciones() {
         return transaciones;
     }
-    public void  agrergarTransacion(Transacción transacción){
+    public void  agrergarTransacion(Transaccion transacción){
         transacción.setCuenta(this);
         transaciones.add(transacción);
     }

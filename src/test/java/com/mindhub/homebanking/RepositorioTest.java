@@ -102,14 +102,14 @@ PasswordEncoder passwordEncoder;
 
     @Test
     public void existeTransacion() {
-        List<Transacción> transacciónes = transacionRepositorio.findAll();
+        List<Transaccion> transacciónes = transacionRepositorio.findAll();
 
         assertThat(transacciónes, is(not(empty())));
     }
 
     @Test
     public void TodosLosMensjasEstanComentados(){
-        List<Transacción> transaccións = transacionRepositorio.findAll();
+        List<Transaccion> transaccións = transacionRepositorio.findAll();
         assertThat(transaccións,is(notNullValue()));
 
     }

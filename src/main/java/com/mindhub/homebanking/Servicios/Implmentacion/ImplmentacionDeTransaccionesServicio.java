@@ -1,9 +1,6 @@
 package com.mindhub.homebanking.Servicios.Implmentacion;
 
-import com.mindhub.homebanking.Modelo.Cliente;
-import com.mindhub.homebanking.Modelo.Tarjeta;
-import com.mindhub.homebanking.Modelo.Transacción;
-import com.mindhub.homebanking.Servicios.ServicioTarjeta;
+import com.mindhub.homebanking.Modelo.Transaccion;
 import com.mindhub.homebanking.Servicios.ServicioTransacciones;
 import com.mindhub.homebanking.dtos.TransacionDTO;
 import com.mindhub.homebanking.repositorios.TransacionRepositorio;
@@ -35,7 +32,7 @@ public class ImplmentacionDeTransaccionesServicio implements ServicioTransaccion
 
 
     @Override
-    public void saveTransacciones(Transacción transacción) {
+    public void saveTransacciones(Transaccion transacción) {
         transacionRepositorio.save(transacción);
 
     }

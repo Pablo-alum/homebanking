@@ -5,8 +5,6 @@ import com.mindhub.homebanking.Modelo.*;
 import com.mindhub.homebanking.Servicios.ServicioTransacciones;
 import com.mindhub.homebanking.Servicios.ServicoCuenta;
 import com.mindhub.homebanking.dtos.TransacionDTO;
-import com.mindhub.homebanking.repositorios.CuentaRepositorio;
-import com.mindhub.homebanking.repositorios.TransacionRepositorio;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -16,7 +14,6 @@ import org.springframework.web.bind.annotation.*;
 import javax.transaction.Transactional;
 import java.time.LocalDateTime;
 import java.util.List;
-import java.util.stream.Collectors;
 
 @RestController
 
@@ -72,10 +69,10 @@ public class ControladorTransacciones {
 
 
 
-        Transacción TransacciónCREDIT = new Transacción(TipoDeTransaccion.CREDITO, monto, descripción, LocalDateTime.now());
+        Transaccion TransacciónCREDIT = new Transaccion(TipoDeTransaccion.CREDITO, monto, descripción, LocalDateTime.now());
         ;// cargar
 
-        Transacción TransacciónDeDEBIT = new Transacción(TipoDeTransaccion.DEBITO, -monto, descripción, LocalDateTime.now());
+        Transaccion TransacciónDeDEBIT = new Transaccion(TipoDeTransaccion.DEBITO, -monto, descripción, LocalDateTime.now());
         ;//Debo
 
 

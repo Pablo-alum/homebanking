@@ -8,7 +8,7 @@ import java.time.LocalDateTime;
 
 @Entity
 @Table(name = "Transaciones")
-public class Transacción {
+public class Transaccion {
 
     @Id
     @GenericGenerator(strategy = "native", name  = "native")
@@ -27,9 +27,9 @@ public class Transacción {
     private Cuenta cuenta;
 
 
-    public Transacción() {}
+    public Transaccion() {}
 
-    public Transacción(TipoDeTransaccion type, Double monto, String descripcion, LocalDateTime date) {
+    public Transaccion(TipoDeTransaccion type, Double monto, String descripcion, LocalDateTime date) {
         this.type = type;
         this.monto = monto;
         this.descripcion = descripcion;
@@ -78,7 +78,7 @@ public class Transacción {
     public void setCuenta (Cuenta cuenta){
         this.cuenta = cuenta;
     }
-    public Transacción(Cuenta cuenta) {
+    public Transaccion(Cuenta cuenta) {
         this.cuenta = cuenta;
     }
 
