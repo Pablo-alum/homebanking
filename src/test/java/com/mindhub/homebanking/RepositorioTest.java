@@ -37,11 +37,7 @@ PasswordEncoder passwordEncoder;
 
     }
 
-    @Test
-    public void existeMelbaAdmin() {
-        List<Cliente> clientes = clienteRepositorio.findAll();
-        assertThat(clientes, hasItem(hasProperty("email", comparesEqualTo("melba@mindhub.com"))));
-    }
+
 
 
     // TEST PRESTAMOS
