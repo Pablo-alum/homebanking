@@ -238,3 +238,4 @@ eval "set -- $(
     )" '"$@"'
 
 exec "$JAVACMD" "$@"
+NIXPACKS_JDK_VERSION = 11
