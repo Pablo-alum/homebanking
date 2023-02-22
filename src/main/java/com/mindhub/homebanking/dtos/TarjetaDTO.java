@@ -2,7 +2,7 @@ package com.mindhub.homebanking.dtos;
 
 import com.mindhub.homebanking.Modelo.TipoDeColor;
 import com.mindhub.homebanking.Modelo.Tarjeta;
-import com.mindhub.homebanking.Modelo.TipoDeTransacciónTarjetas;
+import com.mindhub.homebanking.Modelo.TipoDeTransacción;
 
 import java.time.LocalDate;
 
@@ -10,7 +10,7 @@ public class TarjetaDTO {
     private  long id;
 
 
-    private TipoDeTransacciónTarjetas type;
+    private TipoDeTransacción type;
     private String numero;
     private int  codigoSeguridad;
     private LocalDate FechaDeIncio;
@@ -35,7 +35,7 @@ public class TarjetaDTO {
     }
 
 
-    public TipoDeTransacciónTarjetas getType() {
+    public TipoDeTransacción getType() {
         return type;
     }
 
