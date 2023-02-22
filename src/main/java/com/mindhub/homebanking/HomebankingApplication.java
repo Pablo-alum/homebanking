@@ -25,12 +25,12 @@ public class HomebankingApplication {
 		SpringApplication.run(HomebankingApplication.class, args);
 	}
 
-	@Bean
-	public CommandLineRunner initData(ClienteRepositorio clienteRepositorio, CuentaRepositorio cuentaRepositorio, TransacionRepositorio transacionRepositorio, PrestamoRepositorio prestamoRepositorio, ClientePrestamoRepositorio clientePrestamoRepositorio,TarjetaRepositorio tarjetaRepositorio){
-		return args -> {
+//	@Bean
+//	public CommandLineRunner initData(ClienteRepositorio clienteRepositorio, CuentaRepositorio cuentaRepositorio, TransacionRepositorio transacionRepositorio, PrestamoRepositorio prestamoRepositorio, ClientePrestamoRepositorio clientePrestamoRepositorio,TarjetaRepositorio tarjetaRepositorio){
+//		return args -> {
 
-		};
+//		};
 
-	}
+	//}
 
 }
