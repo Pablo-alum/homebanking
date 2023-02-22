@@ -3,7 +3,6 @@ plugins {
 	id 'io.spring.dependency-management' version '1.0.14.RELEASE'
 	id 'java'
 	id 'maven-publish'
-	id 'commons-codec'
 }
 
 group = 'com.mindhub'
@@ -40,12 +39,6 @@ dependencies {
 
 	// https://mvnrepository.com/artifact/org.thymeleaf/thymeleaf
 	implementation 'org.thymeleaf:thymeleaf:2.0.5'
-
-	implementation('commons-codec:commons-codec') {
-		version {
-			strictly '7'
-		}
-	}
 }
 
 tasks.named('test') {
