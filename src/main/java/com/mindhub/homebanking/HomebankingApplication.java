@@ -24,13 +24,4 @@ public class HomebankingApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(HomebankingApplication.class, args);
 	}
-
-//	@Bean
-//	public CommandLineRunner initData(ClienteRepositorio clienteRepositorio, CuentaRepositorio cuentaRepositorio, TransacionRepositorio transacionRepositorio, PrestamoRepositorio prestamoRepositorio, ClientePrestamoRepositorio clientePrestamoRepositorio,TarjetaRepositorio tarjetaRepositorio){
-//		return args -> {
-
-//		};
-
-	//}
-
 }
