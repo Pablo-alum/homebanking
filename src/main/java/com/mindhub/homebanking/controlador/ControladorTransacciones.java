@@ -72,10 +72,10 @@ public class ControladorTransacciones {
 
 
 
-        Transacción TransacciónCREDIT = new Transacción(TipoDeTransacción.CREDITO, monto, descripción, LocalDateTime.now());
+        Transacción TransacciónCREDIT = new Transacción(TipoDeTransaccion.CREDITO, monto, descripción, LocalDateTime.now());
         ;// cargar
 
-        Transacción TransacciónDeDEBIT = new Transacción(TipoDeTransacción.DEBITO, -monto, descripción, LocalDateTime.now());
+        Transacción TransacciónDeDEBIT = new Transacción(TipoDeTransaccion.DEBITO, -monto, descripción, LocalDateTime.now());
         ;//Debo
 
 

@@ -105,7 +105,7 @@ public class ControladorPrestamos {
 
 
         double monto = solcitudPretamoDTO.getMonto();
-        Transacción TransaccionCredito = new Transacción(TipoDeTransacción.CREDITO,monto, "préstamo aprobado", LocalDateTime.now());
+        Transacción TransaccionCredito = new Transacción(TipoDeTransaccion.CREDITO,monto, "préstamo aprobado", LocalDateTime.now());
             objetoCuenta.agrergarTransacion(TransaccionCredito);
         servicioTransacciones.saveTransacciones(TransaccionCredito);
 

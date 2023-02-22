@@ -42,7 +42,7 @@ public class ControladorTarjetas {
 
 
     @RequestMapping(path = "/api/cliente/current/tarjeta")
-    public ResponseEntity<Object> CrearTarjeta(Authentication authentication, @RequestParam TipoDeTransacción tipoDeTransacción,@RequestParam TipoDeColor tipoDeColor) {
+    public ResponseEntity<Object> CrearTarjeta(Authentication authentication, @RequestParam TipoDeTransaccion tipoDeTransaccion,@RequestParam TipoDeColor tipoDeColor) {
         Cliente cliente = servicoCliente.findByEmail(authentication.getName());
 
 
@@ -54,7 +54,7 @@ public class ControladorTarjetas {
         if (cliente.getTarjeta().stream().filter(tarjeta -> tarjeta.getTipoDeColor().equals(tipoDeColor)).count() >= 3) {
             return new ResponseEntity<>("No se Puden Crear Mas Cuentas", HttpStatus.FORBIDDEN);
         }
-        servicioTarjeta.TarjetaSave(new Tarjeta(tipoDeTransacción, NumeroTarjeta, cvv, LocalDate.now(), LocalDate.now().plusYears(5), Nombrehabitante.toUpperCase(), tipoDeColor, cliente));
+        servicioTarjeta.TarjetaSave(new Tarjeta(tipoDeTransaccion, NumeroTarjeta, cvv, LocalDate.now(), LocalDate.now().plusYears(5), Nombrehabitante.toUpperCase(), tipoDeColor, cliente));
 
 
         return new ResponseEntity<>("Tarejeta Creada",HttpStatus.CREATED);

@@ -16,7 +16,7 @@ public class Transacción {
 
     private long id;
 
-    private TipoDeTransacción type;
+    private TipoDeTransaccion type;
     private Double monto;
 
     private String descripcion;
@@ -29,7 +29,7 @@ public class Transacción {
 
     public Transacción() {}
 
-    public Transacción(TipoDeTransacción type, Double monto, String descripcion, LocalDateTime date) {
+    public Transacción(TipoDeTransaccion type, Double monto, String descripcion, LocalDateTime date) {
         this.type = type;
         this.monto = monto;
         this.descripcion = descripcion;
@@ -41,11 +41,11 @@ public class Transacción {
         return id;
     }
 
-    public TipoDeTransacción getType() {
+    public TipoDeTransaccion getType() {
         return type;
     }
 
-    public void setType(TipoDeTransacción type) {
+    public void setType(TipoDeTransaccion type) {
         this.type = type;
     }
 

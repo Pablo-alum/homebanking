@@ -15,7 +15,7 @@ public class Tarjeta {
     @Id
     private  long id;
 
-    private TipoDeTransacción type;
+    private TipoDeTransaccion type;
 
     private String numero;
 
@@ -37,7 +37,7 @@ public class Tarjeta {
 
     public Tarjeta() {}
 
-    public Tarjeta(TipoDeTransacción type, String numero, int codigoSeguridad, LocalDate fechaDeIncio, LocalDate fechaDeVencimiento, String tarjetahabiente, TipoDeColor tipoDeColor, Cliente cliente) {
+    public Tarjeta(TipoDeTransaccion type, String numero, int codigoSeguridad, LocalDate fechaDeIncio, LocalDate fechaDeVencimiento, String tarjetahabiente, TipoDeColor tipoDeColor, Cliente cliente) {
         this.type = type;
         this.numero = numero;
         this.codigoSeguridad = codigoSeguridad;
@@ -66,11 +66,11 @@ public class Tarjeta {
         return cliente;
     }
 
-    public TipoDeTransacción getType() {
+    public TipoDeTransaccion getType() {
         return type;
     }
 
-    public void setType(TipoDeTransacción type) {
+    public void setType(TipoDeTransaccion type) {
         this.type = type;
     }
 
