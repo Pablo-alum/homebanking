@@ -20,7 +20,7 @@ const { createApp } = Vue
 
     methods:{
 			crear:function(){
-		axios.post('api/clientes/current',"nombre="+this.nombre+"&apellido="+this.apellido+"&email="+this.emial+"&contraseña="+this.contraseña).then(()=>window.location.href="./cuentas.html")
+		axios.post('/api/clientes/current',"nombre="+this.nombre+"&apellido="+this.apellido+"&email="+this.emial+"&contraseña="+this.contraseña).then(()=>window.location.href="./cuentas.html")
 			},		
     }
 
