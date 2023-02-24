@@ -53,8 +53,11 @@
                   >Registrate</span
                 >
               </h2>
-
               <div class="form">
+                <div v-if="cuentaExitosa == true">
+                  <h4 class="text-success">Cuenta creada exitosamente</h4>
+                  <i class="bi bi-check-circle-fill display-6 text-success"></i>
+                </div>
                 <form class="register-form">
                   <input v-model="nombre" type="text" placeholder="Nombre" />
                   <input

@@ -32,6 +32,7 @@
 				  <div class="form">
 
 				    <form class="login-form">
+                <h6 class="text-danger">{{error}}</h6>
 				      <input  v-model="emial" type="text" placeholder="Email"/>
 				      <input v-model="contraseña" type="password" placeholder="Contraseña"/>
 				      <button v-on:click="acceder" type="button">acceder</button>

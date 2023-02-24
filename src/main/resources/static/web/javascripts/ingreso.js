@@ -1,33 +1,25 @@
+const { createApp } = Vue;
+createApp({
+  data() {
+    return {
+      error: "",
+      contraseña: [],
+      emial: [],
+    };
+  },
+  created() {},
 
-const { createApp } = Vue
-  createApp({
-    data() {
-      return {
-				hola:"hola",
-				contraseña:[],
-				emial:[],
+  mounted() {},
 
-      }
-
+  methods: {
+    acceder: function () {
+      axios
+        .post(
+          "/api/login",
+          "email=" + this.emial + "&contraseña=" + this.contraseña
+        )
+        .then(() => (window.location.href = "./cuentas.html"))
+        .catch(() => (this.error = "La contraseña o el correo son incorrecta"));
     },
-    created(){
-      
- 
-    },
-
-    mounted(){
-		},
-
-    methods:{
-     
-			acceder:function(){
-
-				axios.post('/api/login',"email="+this.emial+"&contraseña="+this.contraseña).then(()=>window.location.href="./cuentas.html")
-			},
-
-    }
-
-
-
-}).mount('#app')
-
+  },
+}).mount("#app");
