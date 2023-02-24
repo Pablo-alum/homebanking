@@ -47,7 +47,7 @@ const { createApp } = Vue
 			CrearTarjetas:function(){
         console.log(this.tipoDeTarjeta)
         console.log(this.ColorTarjeta)
-        axios.post('/api/cliente/current/tarjeta',"tipoDeTransacciónTarjetas=CREDITO"+"&tipoDeColor=GOLD").then(()=>window.location.href="./tarjetas.html")
+        axios.post('/api/cliente/current/tarjeta',"tipoDeTransaccion=CREDITO"+"&tipoDeColor=GOLD").then(()=>window.location.href="./tarjetas.html")
 
 			},
     },
