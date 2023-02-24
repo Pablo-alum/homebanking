@@ -20,7 +20,7 @@ public class WebSecurityConfig {
 
         http.authorizeRequests()
                 .antMatchers( "/web/cuentas.html", "/web/prestamos.html", "/web/tarjetas.html", "/web/transacion.html", "/web/creadorDeTarjetas.html" ).hasAnyAuthority("CLIENTE", "ADMIN")
-               .antMatchers("/admin/**", "/h2-console/**", "/rest/**").hasAuthority("ADMIN")
+               .antMatchers("/admin/**", "/h2-console/**", "/rest/**","/cuentas/**","/clientes/**","/tarjetas/**","/transaccions/**","/clientePrestamoes/**", "/profile/**").hasAuthority("ADMIN")
                 .antMatchers("web/**","api/clientes/current","api/**").permitAll();
 
 
